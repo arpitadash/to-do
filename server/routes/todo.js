@@ -19,21 +19,21 @@ router.get("/", getAllTodo);
  * @description add a new todo
  * @access public
  */
-router.post("/",postCreateTodo);
+router.post("/create-list-item/:id",postCreateTodo);
 
 /**
  * @route PUT api/todo/:id
  * @description update todo
  * @access public
  */
-router.put("/:id",putUpdateTodo);
+router.put("/update-item/:id",putUpdateTodo);
 
 /**
  * @route DELETE api/todo/:id
  * @description delete todo
  * @access public
  */
-router.delete("/:id",deleteTodo);
+router.delete("/delete-item/:id",deleteTodo);
 
 // router.post('/query/:item', async (req, res) => {
 //     let response = await openai.chat.completions.create({

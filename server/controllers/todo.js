@@ -14,9 +14,7 @@ exports.postCreateTodo = (req, res) => {
     Todo.create(req.body)
         .then((data) => res.json({ status:'success', message: "Todo added successfully", data }))
         .catch((err) =>
-            res
-                .status(400)
-                .json({ message: "Failed to add todo", error: err.message })
+            res.status(400).json({ message: "Failed to add todo", error: err.message })
         );
 };
 
